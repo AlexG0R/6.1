@@ -40,12 +40,10 @@ public class StatsService {
 
     public long averageAmountSales(long[] sales) {
         long avgSales = 0;
-        int sumMonths = 0; // переменная для индекса рассматриваемого месяца в массиве
         for (long sale : sales) {
             avgSales = avgSales + sale;
-            sumMonths = sumMonths + 1;
         }
-        return avgSales / sumMonths;
+        return avgSales / sales.length;
     }
 
     public int countLessAverageAmountSales(long[] sales) {
